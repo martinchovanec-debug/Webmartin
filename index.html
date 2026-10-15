@@ -1,74 +1,159 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FixPhone – opravy a bazar použitých mobilních telefonů za příznivé ceny</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FixPhone – opravy a bazar mobilních telefonů</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="nav">
-  <a href="#o-mne" class="logo" aria-label="FixPhone">
-    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
-      <rect x="9" y="3" width="14" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/>
-      <path d="M13 22l6-6m0 0a3 3 0 1 0-4-4l2 2-2 2-2-2" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <span>FixPhone</span>
-  </a>
-  <nav>
-    <a href="#o-mne">O mně</a>
-    <a href="#cenik">Ceník</a>
-    <a href="#bazar">Bazar</a>
-    <a href="#lokalita">Lokalita</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-</header>
+  <header class="nav">
+    <a href="#o-mne" class="logo" aria-label="FixPhone">
 
-<main>
-  <section id="o-mne">
-    <div class="wrap">
-      <h1>Opravím váš telefon.<br>Nebo vám najdu jiný.</h1>
-      <p class="lead">Opravuji mobilní telefony rychle, poctivě a s garancí. Nabízím také prověřený bazar použitých telefonů.</p>
-      <a class="btn" href="#cenik">Zobrazit ceník</a>
-    </div>
-  </section>
+      <svg
+        viewBox="0 0 32 32"
+        width="30"
+        height="30"
+        aria-hidden="true"
+      >
+        <rect
+          x="9"
+          y="3"
+          width="14"
+          height="26"
+          rx="4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+        />
 
-  <section id="cenik">
-    <div class="wrap">
-      <h2>Ceník oprav</h2>
-      <div id="cenik-list" class="price-list"></div>
-    </div>
-  </section>
+        <path
+          d="M13 22l6-6m0 0a3 3 0 1 0-4-4l2 2-2 2-2-2"
+          fill="none"
+          stroke="var(--accent)"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
 
-  <section id="bazar">
-    <div class="wrap">
-      <h2>Bazar telefonů</h2>
-      <div id="bazar-list" class="cards"></div>
-    </div>
-  </section>
+      <span>FixPhone</span>
+    </a>
 
-  <section id="lokalita">
-    <div class="wrap">
-      <h2>Lokalita</h2>
-      <p id="adresa" class="lead"></p>
-      <div class="map">
-        <!-- Sem vložte iframe z Google Map: Sdílet → Vložit mapu -->
-        <span>Zde vložte mapu (viz komentář v index.html)</span>
+    <nav aria-label="Hlavní navigace">
+      <a href="#o-mne">O mně</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#bazar">Bazar</a>
+      <a href="#lokalita">Lokalita</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section id="o-mne">
+      <div class="wrap">
+
+        <h1>
+          Opravím váš telefon.<br>
+          Nebo vám najdu jiný.
+        </h1>
+
+        <p class="lead">
+          Opravuji mobilní telefony rychle, poctivě a s garancí.
+          Nabízím také prověřený bazar použitých telefonů.
+        </p>
+
+        <a class="btn" href="#cenik">
+          Zobrazit ceník
+        </a>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="kontakt">
-    <div class="wrap">
-      <h2>Kontakt</h2>
-      <ul class="contact" id="kontakt-list"></ul>
-    </div>
-  </section>
-</main>
 
-<script src="script.js"></script>
+    <section id="cenik">
+      <div class="wrap">
+
+        <h2>Ceník oprav</h2>
+
+        <p class="section-description">
+          Orientační ceny oprav. Konečná cena závisí na konkrétním modelu
+          telefonu a použitém náhradním dílu.
+        </p>
+
+        <div id="cenik-list" class="price-list"></div>
+
+      </div>
+    </section>
+
+
+    <section id="bazar">
+      <div class="wrap">
+
+        <h2>Bazar telefonů</h2>
+
+        <p class="section-description">
+          Prověřené použité telefony za rozumné ceny.
+        </p>
+
+        <div id="bazar-list" class="cards"></div>
+
+      </div>
+    </section>
+
+
+    <section id="lokalita">
+      <div class="wrap">
+
+        <h2>Lokalita</h2>
+
+        <p id="adresa" class="lead"></p>
+
+        <div class="map">
+          <iframe
+             src="https://www.google.com/maps?q=49.7775,18.452772&z=17&output=embed"
+              title="FixPhone – mapa"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="kontakt">
+      <div class="wrap">
+
+        <h2>Kontakt</h2>
+
+        <p class="section-description">
+          Máte rozbitý telefon nebo hledáte použitý mobil?
+          Ozvěte se mi.
+        </p>
+
+        <ul class="contact" id="kontakt-list"></ul>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>
